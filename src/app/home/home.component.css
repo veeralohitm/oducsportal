@@ -1,0 +1,28 @@
+.list-group-item.active{
+    background-color: #003057;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    background-color: #003057;
+}
+h1,h2,h3,h4{
+    color: #00213b;
+}
+a{
+    color: #002139;
+}
+
+.mgt10{
+    margin-top:10px;
+}
+
+.nav-link{
+    color:black;
+}
+.btn-primary{
+    background-color:#003057;
+}
+.list-group-item:hover{
+    background-color:#003057;
+    color: white;;
+}
+

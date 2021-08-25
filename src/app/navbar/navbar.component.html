@@ -1,0 +1,37 @@
+
+<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+  
+        <img src="assets/images/logo.png" width="200px" />
+        
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">          
+          <li class="nav-item" *ngIf="data$.admin.visible || data$.questions.visible" >
+            <a class="nav-link active" [routerLink]="['home']" >HOME</a>
+          </li>
+          <li class="nav-item" *ngIf="data$.admin.visible || data$.questions.visible" >
+            <a class="nav-link " [routerLink]="['profile']" >PROFILE</a>
+          </li>
+          <li class="nav-item" *ngIf="data$.admin.visible">
+            <a class="nav-link " [routerLink]="['dashboard']" >DASHBOARD</a>
+          </li>
+          <li class="nav-item" *ngIf="data$.admin.visible || data$.questions.visible"  >
+            <a class="nav-link" [routerLink]="['about']">ABOUT</a>
+          </li>    
+          
+          <li class="nav-item" *ngIf="data$.questions.visible">
+            <a class="nav-link" [routerLink]="['ask']">ASK INSTRUCTOR</a>
+          </li>                       
+            <li class="nav-item" *ngIf="data$.admin.visible || data$.questions.visible"  >
+              <a class="nav-link" href="#" (click)="onLogout($event)">LOGOUT</a>
+            </li>  
+        </ul>
+       
+      </div>
+    </div>
+  </nav>

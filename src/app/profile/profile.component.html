@@ -1,0 +1,102 @@
+<div class="container">
+    <div class="row">      
+
+        <div class="col-lg-6 offset-lg-3">
+          <div *ngIf="!savedChanges else showSavedChangesCard">
+            <div *ngIf="newUser else showUpdateForm">
+              <form #formData='ngForm'>
+                <h3>New User - Update Profile </h3>
+                <div *ngIf="error">
+                  {{ errorMessage }}
+                </div>
+                <div class="col">
+                  <label class="col-form-label">Name</label>      
+                  <input placeholder="name" class="form-control form-control-lg"  name="name" #name="ngModel" ngModel required minlength="5" maxlength="30"/>
+                </div>
+                <div class="col">
+                  <label class="col-form-label">Email</label>      
+                  <input placeholder="email" class="form-control form-control-lg"  name="email"  disabled readonly placeholder="{{ useremail }}" #email="ngModel" ngModel required email/>
+                </div>
+                <div class="col">
+                  <label class="col-form-label">Phone</label>      
+                  <input placeholder="phone #" class="form-control form-control-lg"  name="phone" #phone="ngModel" ngModel required maxlength="10"
+                  pattern="^[a-z0-9_-]{8,15}$"/>
+                </div>
+                <div class="col">
+                  <label class="col-form-label">Role</label>      
+                  <input  placeholder="Role" class="form-control form-control-lg"  disabled readonly placeholder="student"  name="role" #role="ngModel" ngModel/>
+                </div>
+                <div class="mt-3">                           
+                         
+                  <button type="button"  (click)="onSubmit_newuser(formData.value);"  class="btn btn-primary" >Update</button>
+              
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+    </div>
+</div>
+
+<ng-template #showSavedChangesCard>
+   <h3>Your Profile is Updated</h3> 
+  </ng-template>
+
+  <div class="container pt-4">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            
+    
+                  <ng-template #showUpdateForm>
+                    <form #formData='ngForm'>
+                               <h3>Profile Settings </h3>
+                        
+                          <div *ngIf="error">
+                          {{ errorMessage }}
+                          </div>
+                  
+                       
+                            <div class="col">
+                              <label class="col-form-label">Name</label>                                  
+                                    <input  type="text" class="form-control form-control-lg"  name="name" #name="ngModel" [ngModel]="data$?.name" required minlength="5"
+                                    maxlength="30">
+                            </div>
+                            <div class="col">
+                              <label class="col-form-label">Email</label>                            
+                              <input  placeholder="email" class="form-control form-control-lg" name="email" #email="ngModel"  disabled readonly [ngModel]="data$?.email" required email>               
+                           
+                            </div>
+                            <div class="col">
+                              <label class="col-form-label">Phone</label>                           
+                            
+                              <input  placeholder="phone #" class="form-control form-control-lg" name="phone" #phone="ngModel" [ngModel]="data$?.phone" required
+                                     maxlength="10" pattern="^[a-z0-9_-]{8,15}$">             
+                           
+                            </div>
+                            <div class="col">
+                              <label class="col-form-label">Role</label>                            
+                              <input  placeholder="Role"   class="form-control form-control-lg" type="text" name="role" disabled readonly  #role="ngModel" [ngModel]="data$?.role">       
+                           
+                            </div>          
+
+
+                        
+                        <div class="mt-3">                           
+                         
+                          <button type="button" (click)="onSubmit_update(formData.value);"  class="btn btn-primary showtoast" >Update</button>
+                      
+                        </div>
+                       
+                       
+                      </form>
+                    </ng-template>
+                 
+               
+        </div>
+    </div>
+  </div>
+
+  

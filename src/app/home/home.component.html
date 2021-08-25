@@ -1,0 +1,154 @@
+
+<div class="container" style="margin-top:20px">
+  <h4>Hello {{ username }}</h4>  
+  <div class="row">      
+        <div class="col-sm-12 col-md-5 mgt10 ">
+         
+          <h3>Couse Details</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Deaprtment : Computer Science</li>        
+            <li class="list-group-item">Subject Code : CS 120/121 G</li>
+            
+            <li class="list-group-item">Current Topic : Lecture 11</li>
+            <li class="list-group-item">Syllabus :  For Full Syllabus <a href="https://www.cs.odu.edu/~advisor/advising/syllabi/spring2017/CS120-121G.pdf">Click here </a></li>
+          </ul>
+        </div>
+    
+    
+        <div class="col-sm-12 col-md-7 mgt10">
+          <div class="row">
+          <div class="col-md-6"><h3>Important Updates</h3></div>
+                   
+        </div>
+          
+          <div class="list-group">
+            <div href="#" class="list-group-item list-group-item-action "  *ngFor="let post of posts">
+              <div class="d-flex w-100 justify-content-between">
+                <h6 class="mb-1">{{ post.title }}</h6>
+                <small class="text-muted">{{ post.date }}</small>                
+              </div>         
+              <small class="text-muted">{{ post.content }}</small>
+            </div>
+            
+            
+          </div>
+    
+        </div>
+    
+    </div>
+    </div>
+    <div class="container" style="margin-top:20px">
+     
+      <div class="row">
+        <div class="col-sm-12 col-md-5 mgt10">
+        <h3>Assignments</h3>
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Assignment 1</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Assignment 2</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Assignment 3</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+          <h4>Instructions</h4>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </li>
+            <li>Duis nec eros eleifend, auctor sem in, ultrices magna.
+            </li>
+            <li>
+              Nulla gravida libero eu diam faucibus tincidunt.
+    
+            </li>
+            <li>Maecenas mollis urna sed nisl auctor, non ornare erat lobortis.
+            </li>
+           
+            
+          </ul>
+          <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">Download Your Assignment Question</a>
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+          <h4>Instructions</h4>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </li>
+            <li>Duis nec eros eleifend, auctor sem in, ultrices magna.
+            </li>
+            <li>
+              Nulla gravida libero eu diam faucibus tincidunt.
+    
+            </li>
+            <li>Maecenas mollis urna sed nisl auctor, non ornare erat lobortis.
+            </li>
+            
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+          <h4>Instructions</h4>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </li>
+            <li>Duis nec eros eleifend, auctor sem in, ultrices magna.
+            </li>
+            <li>
+              Nulla gravida libero eu diam faucibus tincidunt.
+    
+            </li>
+            <li>Maecenas mollis urna sed nisl auctor, non ornare erat lobortis.
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+      </div>
+      <div class="col-sm-12 col-md-7 mgt10">
+        <h3>Lectures</h3>
+        <p>Content will be uploaded in Lectures Periodically</p>
+        <ul class="list-group list-group-horizontal">
+          <a [routerLink]="['../lecture']"><li class="list-group-item">Lecture 1</li></a>
+          <a [routerLink]="['../lecture']"><li class="list-group-item">Lecture 2</li></a>
+          <a [routerLink]="['../lecture']"><li class="list-group-item">Lecture 3</li></a>
+           <a [routerLink]="['../lecture']"><li class="list-group-item">Lecture 4</li></a>
+          <a [routerLink]="['../lecture']"><li class="list-group-item">Lecture 5</li></a>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+         
+          <a [routerLink]="['../lecture']"><li class="list-group-item">Lecture 6</li></a>
+          <a [routerLink]="['../lecture']"><li class="list-group-item">Lecture 7</li></a>
+          <a [routerLink]="['../lecture']"><li class="list-group-item">Lecture 8</li></a>
+          <a [routerLink]="['../lecture']"><li class="list-group-item">Lecture 9</li></a>
+          <a [routerLink]="['../lecture']"><li class="list-group-item">Lecture 10</li></a>
+        </ul>
+        <ul class="list-group list-group-horizontal">
+          <a [routerLink]="['../lecture']"><li class="list-group-item">Lecture 11</li></a>
+          <a [routerLink]="['../lecture']"><li class="list-group-item">Lecture 12</li></a>
+          <a [routerLink]="['../lecture']"><li class="list-group-item">Lecture 13</li></a>
+          <a [routerLink]="['../lecture']"><li class="list-group-item">Lecture 14</li></a>
+          <a [routerLink]="['../lecture']"><li class="list-group-item">Lecture 15</li></a>
+        </ul>   
+        <ul class="list-group list-group-horizontal">
+          <a [routerLink]="['../lecture']"><li class="list-group-item">Lecture 16</li></a>
+          <a [routerLink]="['../lecture']"><li class="list-group-item">Lecture 17</li></a>
+          <a [routerLink]="['../lecture']"><li class="list-group-item">Lecture 18</li></a>
+        </ul>
+      </div>
+    </div>
+    
+    </div>
+    <div class="container mgt10">
+        <h3>Resources</h3>
+    </div>
+
+
+
+
+    
+    

@@ -1,0 +1,16 @@
+{
+  "user": [
+    {
+      "username": "lohit",
+      "password": "123456",
+      "id": 1
+    }
+  ],
+  "updates": [
+    {
+      "updatetext": "PDF's updated in Lecture 14",
+      "id": 1
+    }
+    
+  ]
+}
